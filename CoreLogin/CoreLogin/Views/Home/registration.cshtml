@@ -1,0 +1,38 @@
+﻿@model CoreLogin.Models.Ad_Login
+@{
+}
+
+<h2>Registration For New User</h2>
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label class="control-label">Admin ID</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Admin_id" class="form-control" />
+            </div>
+            <span asp-validation-for="Admin_id" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label class="control-label">Password</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Ad_pass" class="form-control" />
+            </div>
+            <span asp-validation-for="Ad_pass" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back to List</a>
+            </div>
+        </div>
+    </form>
+</div>
